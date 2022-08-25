@@ -35,6 +35,7 @@
           </a>
           <p class="mb-2 font-normal text-gray-500">Fast API</p>
           <p class="mb-2 font-normal text-gray-500">Trade To Earn</p>
+          <p class="mb-2 font-normal text-gray-500"><br /></p>
         </div>
         <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-full">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">

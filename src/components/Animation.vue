@@ -1,5 +1,5 @@
 <template>
-  <div className="marquee-root mt-20 pb-42">
+  <div className="marquee-root mt-20 pb-42 hidden md:block">
     <div className="marquee-content flex flex-row">
       <div v-for="crypto in getCrypto.slice(0, 100)" :key="crypto.id">
         <a href="javascript:void(0)" class="ml-5 block p-6 w-60 bg-gray-800 rounded-lg shadow-md">

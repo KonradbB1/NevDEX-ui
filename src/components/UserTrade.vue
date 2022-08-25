@@ -1,6 +1,6 @@
 <template>
   <div class="px-1 pt-1 bg-gray-900 h-full">
-    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh">
+    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh;">
       <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
         <ul class="flex -mb-px">
           <li class="mr-2">
@@ -54,7 +54,7 @@
           <div v-bind:class="{ hidden: openTab !== 2, block: openTab === 2 }" class="h-full">
             <!-- Component Start  -->
             <div class="flex flex-col w-full text-left h-full">
-              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs">
+              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs py-2">
                 <div class="flex items-center flex-grow w-0 h-6"><span>Market</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Type</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Side</span></div>
@@ -65,7 +65,7 @@
               </div>
               <div class="overflow-auto">
                 <div v-if="tradeOrders.length == 0" class="text-gray-400 items-center text-center mt-5 text-xs">No Trade History</div>
-                <div v-for="order in tradeOrders" :key="order.Id" class="flex flex-shrink-0 text-xs text-gray-100">
+                <div v-for="order in tradeOrders" :key="order.Id" class="flex flex-shrink-0 text-xs text-gray-100 py-5">
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.MarketId }}</span>
                   </div>
@@ -97,17 +97,18 @@
 
           <div v-bind:class="{ hidden: openTab !== 3, block: openTab === 3 }">
             <!-- Component Start  -->
+            <p class="mt-2 text-gray-200">Holding NDX makes you eligible for fee discounts:</p>
             <div class="flex flex-col w-full h-60 text-left">
-              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs">
+              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs py-2">
                 <div class="flex items-center flex-grow w-0 h-6"><span>Fee Tier</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Taker</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Maker </span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Balance </span></div>
               </div>
               <div class="overflow-auto">
-                <div v-for="fee in feeTier" :key="fee.id" class="flex flex-shrink-0 text-xs text-gray-100">
+                <div v-for="fee in feeTier" :key="fee.id" class="flex flex-shrink-0 text-xs text-gray-100 py-1">
                   <div class="flex items-center flex-grow w-0 h-6">
-                    <span>Tier {{ fee.id }}</span>
+                    <span> {{ fee.id }}</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ fee.taker }}%</span>
@@ -116,7 +117,7 @@
                     <span>{{ fee.maker }}</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
-                    <span>{{ fee.balance }} NDX</span>
+                    <span>>={{ fee.balance }} NDX</span>
                   </div>
                 </div>
               </div>
@@ -149,31 +150,31 @@ export default {
         {
           id: 1,
           maker: 0,
-          taker: 10,
-          balance: 5,
+          taker: 0.22,
+          balance: 100,
         },
         {
           id: 2,
           maker: 0,
-          taker: 15,
-          balance: 8,
+          taker: 0.2,
+          balance: 1000,
         },
         {
           id: 3,
           maker: 0,
-          taker: 30,
-          balance: 100000,
+          taker: 0.18,
+          balance: 10000,
         },
         {
           id: 4,
           maker: 0,
-          taker: 40,
-          balance: 500000,
+          taker: 0.16,
+          balance: 100000,
         },
         {
           id: 5,
           maker: 0,
-          taker: 60,
+          taker: 0.14,
           balance: 1000000,
         },
       ],

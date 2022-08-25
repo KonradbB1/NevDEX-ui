@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col text-center mass-header z-10 bg">
-    <video autoPlay loop muted id="video">
+    <video autoPlay loop muted id="video" class="hidden md:block">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>
     <div class="z-10 flex flex-col md:p-0 p-5 bg">
@@ -17,7 +17,7 @@
       </div>
       <div class="flex justify-center text-gray-200 text-xl items-center mt-2">
         <div class="text-left text-[17px] text-gray-500">Powered by</div>
-        <div class="flex flex-row items-center"><img class="h-[3.5rem]" src="../assets/godwoken.png" alt="logo" /> <span class="-ml-2">Nervos Godwoken</span></div>
+        <div class="flex flex-row items-center"><img class="h-[3.5rem]" src="../assets/godwoken.png" alt="logo" /> <span class="-ml-2">Godwoken</span></div>
       </div>
     </div>
   </div>
