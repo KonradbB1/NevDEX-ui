@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col text-center mass-header z-10 bg">
-    <video autoPlay loop muted id="video" class="hidden md:block">
+    <video autoPlay loop muted id="video" v-if="!_isMobile()">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>
     <div class="z-10 flex flex-col md:p-0 p-5 bg">
@@ -24,7 +24,23 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isMobile: false,
+    }
+  },
+  methods: {
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag
+    },
+  },
+
+  mounted: function () {
+    this.isMobile = this._isMobile()
+  },
+}
 </script>
 
 <style scoped>
