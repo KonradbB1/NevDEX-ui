@@ -1,6 +1,6 @@
 <template>
   <div class="px-1 pt-1 bg-gray-900 h-full">
-    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh;">
+    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh">
       <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
         <ul class="flex -mb-px">
           <li class="mr-2">
@@ -14,7 +14,7 @@
           </li>
         </ul>
       </div>
-      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%;">
+      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%">
         <div class="tab-content tab-space h-full">
           <div v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }" class="h-full">
             <!-- Component Start  -->
@@ -34,10 +34,10 @@
                     <span>{{ order.MarketId }}</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
-                    <span>{{ order.Amount }}</span>
+                    <span class="break-all">{{ order.Amount }}</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
-                    <span>{{ order.ConfirmedAmount }}</span>
+                    <span class="break-all">{{ order.ConfirmedAmount }}</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.Price }}</span>
